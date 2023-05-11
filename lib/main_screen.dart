@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/quiz.dart';
 
 class MainPage extends StatelessWidget{
-  const MainPage({super.key});
+  const MainPage(this.startQuiz, {super.key});
   
+  final void Function() startQuiz;
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -31,9 +34,7 @@ class MainPage extends StatelessWidget{
               backgroundColor:
                   MaterialStatePropertyAll(Color(0x903E0000)),
             ),
-            onPressed: () {
-              print('Pressed');
-            },
+            onPressed: startQuiz,
             label: const Text(
               'Start Quiz',
               style: TextStyle(
