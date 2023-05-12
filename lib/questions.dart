@@ -33,46 +33,7 @@ class _QuestionsState extends State<Questions>{
 
           SizedBox(
             width: 300,
-            child: OutlinedButton(
-              onPressed: (){}, 
-              child: const Text(
-                'Option 1',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                ),            
-              ),
-            ),
-          ),
-          SizedBox(
-            width: 300,
-            child: OutlinedButton(
-              onPressed: (){}, 
-              child: const Text(
-                'Option 1',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                ),            
-              ),
-            ),
-          ),
-          SizedBox(
-            width: 300,
-            child: OutlinedButton(
-              onPressed: (){}, 
-              child: const Text(
-                'Option 1',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                ),            
-              ),
-            ),
-          ),
-          SizedBox(
-            width: 300,
-            child: OutlinedButton(
+            child: ElevatedButton(
               onPressed: (){}, 
               child: const Text(
                 'Option 1',
