@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/data/question_DB.dart';
 import 'package:flutter_application_2/main_screen.dart';
 import 'package:flutter_application_2/questions.dart';
+import 'package:flutter_application_2/results_screen.dart';
 
 class Quiz extends StatefulWidget{
-  const Quiz({super.key});
+  Quiz({super.key});
 
   @override
   State<Quiz> createState(){
@@ -19,15 +21,30 @@ class _QuizState extends State<Quiz>{
       activeScreen = 'Questions';
     });
   }
-  
+
+  List<String> guessedAnswers = []; 
+
+  void chooseAnswer(String answer){
+    guessedAnswers.add(answer);
+
+    if(guessedAnswers.length == questions.length){
+      setState(() {
+        activeScreen = 'ResultScreen';
+      });
+    }
+  }
+
   @override
   Widget build(context){
     Widget screen = MainPage(switchScreen);
     if(activeScreen == 'Questions'){
-      screen = Questions();
+      screen = Questions(onChooseAnswer: chooseAnswer);
     }
 
-
+    if(activeScreen == 'ResultScreen'){
+      screen = ResultScreen(guessedAnswers);
+    }
+    
     return MaterialApp(
       home: Scaffold(
         body: Container(

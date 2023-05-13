@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/quiz.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MainPage extends StatelessWidget{
   const MainPage(this.startQuiz, {super.key});
@@ -14,13 +15,13 @@ class MainPage extends StatelessWidget{
         children: [
           Image.asset('assests/images/Quiz_Logo.png'),
           const SizedBox(height: 20),
-          const Text(
+          Text(
             'Ultimate Car Logo Quiz',
-            style: TextStyle(
+            style: GoogleFonts.bebasNeue(
               color: Colors.white,
-              fontSize: 30,
+              fontSize: 45,
               shadows: [
-                Shadow(
+                const Shadow(
                   color: Color(0x90000000),
                   offset: Offset(5, 5),
                 ),
