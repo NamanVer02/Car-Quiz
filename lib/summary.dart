@@ -1,33 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/data/question_DB.dart';
+import 'package:flutter_application_2/summary_item.dart';
 
 class Summary extends StatelessWidget{
-  Summary(this.summary, {super.key});
+  const Summary(this.summary, {super.key});
 
-  List<Map<String, Object>> summary = [];
+  final List<Map<String, Object>> summary;
   
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         ...summary.map((data){
-          return Row(
-            children: [
-              Text(data['questionIndex'].toString()),
-              Expanded(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(data['question'] as String),
-                    const SizedBox(height: 10,),
-                    Text(data['answer'] as String),
-                    Text(data['correct'] as String),
-                  ],
-                ),
-              ),
-            ],
-          ); 
-        })
+          Color color = Colors.white;
+
+          if(data['answer'] == data['correct']){
+            color = Colors.lightGreen;
+          }
+          else{
+            color = Colors.redAccent;
+          }
+            return Row(
+              children: [
+                SummaryItem(data['questionIndex'].toString(), data['image'].toString(), data['answer'].toString(), color),
+              ],
+            ); 
+          },
+        )
       ],
     );
   }

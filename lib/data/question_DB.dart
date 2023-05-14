@@ -13,7 +13,7 @@ const questions = [
     'Logo_2.png',
     'What car brand is this ?',
     [
-      'Toyota', 'Teslt', 'Talbot', 'Opel' 
+      'Toyota', 'Tesla', 'Talbot', 'Opel' 
     ]
   ),
 

@@ -5,7 +5,7 @@ import 'package:flutter_application_2/questions.dart';
 import 'package:flutter_application_2/results_screen.dart';
 
 class Quiz extends StatefulWidget{
-  Quiz({super.key});
+  const Quiz({super.key});
 
   @override
   State<Quiz> createState(){
@@ -34,6 +34,13 @@ class _QuizState extends State<Quiz>{
     }
   }
 
+  void restartQuiz(){
+    setState(() {
+      guessedAnswers.clear();
+      activeScreen = 'Questions';
+    });
+  }
+
   @override
   Widget build(context){
     Widget screen = MainPage(switchScreen);
@@ -42,7 +49,7 @@ class _QuizState extends State<Quiz>{
     }
 
     if(activeScreen == 'ResultScreen'){
-      screen = ResultScreen(guessedAnswers);
+      screen = ResultScreen(guessedAnswers, restartQuiz);
     }
     
     return MaterialApp(
