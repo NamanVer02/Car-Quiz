@@ -1,16 +1,9 @@
-# flutter_application_2
+##Car Quiz
 
-A new Flutter project.
+This simple quiz app built using Flutter that tests your knowledge of car logos. To use the app, simply download and install it on your device, then start answering questions.
 
-## Getting Started
+The app features a variety of car logos, and each question displays a logo that you must match to the correct brand name. You'll receive feedback after each answer, and you can track your progress as you move through the quiz.
 
-This project is a starting point for a Flutter application.
+This app was created as a project while learning Flutter and is a great example of building real-world applications using this framework. We hope you enjoy using "Car Logo Quiz" and testing your car logo knowledge.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+If you have any questions or feedback, please feel free to contact me. Thank you for using "Car Logo Quiz"!"
