@@ -16,6 +16,7 @@ class MainPage extends StatelessWidget{
           const SizedBox(height: 20),
           Text(
             'Ultimate Car Logo Quiz',
+            textAlign: TextAlign.center,
             style: GoogleFonts.bebasNeue(
               color: Colors.white,
               fontSize: 45,
